@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add this at the very top of your CSS */
+[hidden] {
+  display: none !important;
+}
+
+:root {
+    --Orange-500: hsl(25, 97%, 53%);
+    --White: hsl(0, 100%, 100%);
+    --Grey-500: hsl(217, 12%, 63%);
+    --Grey-900: hsl(213, 19%, 18%);
+    --Grey-950: hsl(216, 12%, 8%);
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--Grey-950);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Grey-900);
+    border-radius: 20px;
+    padding: 1rem;
+    flex-wrap: wrap;
+    width: 300px;
+    min-height: 250px;
+}
+
+img {
+    display: block;
+}
+
+.star-img span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-color: hsla(206, 6%, 22%, 0.9);
+}
+
+.star-img img {
+    height: 10px;
+}
+
+.heading h2 {
+    color: var(--White);
+    margin-top: 20px;
+    font-size: 1.45rem;
+}
+
+.request p {
+    color: var(--Grey-500);
+    font-size: 0.75rem;
+    margin-top: 10px;
+}
+
+section > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Grey-500);
+    font-weight: bolder;
+    font-size: 0.75rem;
+    background-color: hsla(206, 6%, 22%, 0.9);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.rate-num{
+    padding: 10px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+    /* justify-content: space-around; */
+}
+
+.rate-num div.selected{
+    background-color: var(--White);
+    color: var(--Grey-950);
+}
+
+.rate-num div:hover{
+    background-color: var(--Orange-500);
+    color: var(--Grey-950);
+    font-weight: bolder;
+}
+
+.submit-btn {
+    background-color: var(--Orange-500);
+    color: var(--Grey-950);
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    min-width: 50px;
+    margin-bottom: 10px;
+}
+
+.submit-btn:hover{
+    background-color: var(--White);
+}
+
+/* Rating greet card */
+.greet-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Grey-900);
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 1rem;
+    flex-wrap: wrap;
+    width: 300px;
+    min-height: 250px;
+    margin-top: 20px;
+}
+
+.thankyou-img img{
+    height: 70px;
+    margin-top: 10px;
+}
+
+.rate-card{
+   background-color: hsla(206, 6%, 22%, 0.9);
+   padding: 5px;
+   border-radius: 10px;
+   margin-top: 20px;
+}
+
+.rate-card p{
+    color: hsla(25, 85%, 56%, 0.7);
+    font-size: 0.65rem;
+}
+
+.thank-you h3{
+    color: var(--White);
+    margin-top: 20px;
+}
+
+.greet p{
+     color: var(--Grey-500);
+    font-size: 0.75rem;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.backbtn{
+    background-color: var(--Orange-500);
+    color: var(--Grey-950);
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    min-width: 150px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 320px){
+    .card ,.greet-card{
+        width: 230px;
+        padding: 0.8rem;
+    }
+
+    .rate-num > div{
+        height: 25px;
+        width: 30px;
+        font-size: 0.7rem;
+    }
+
+    .rate-num{
+        width: 100%;
+    }
+    
+    .heading h2 {
+    font-size: 1.2rem;
+  }
+
+  .request p,
+  .greet p {
+    font-size: 0.7rem;
+  }
+}
